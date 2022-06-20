@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.nav ul:nth-child(2) {
+    justify-content: flex-end
+}
+
+.nav_ul {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    padding: 0;
+}
+
+
+.nav_ul li {
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
