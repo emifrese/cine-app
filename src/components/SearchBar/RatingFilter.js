@@ -1,19 +1,36 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { moviesActions } from "../../store/movies";
 
 import classes from "./RatingFilter.module.css";
 
 const RatingFilter = () => {
-  const [ratingStars, setRatingStars] = useState("");
+  const [ratingStars, setRatingStars] = useState(0);
+  const dispatch = useDispatch();
+  const movies = useSelector((state) => state.movies.movies);
+  const searchMovies = useSelector((state) => state.movies.searchMovies);
+  const ratedMovies = useSelector(state => state.movies.ratedMovies)
+
+  console.log(movies)
+  console.log(ratedMovies)
+
+  const typeArray = searchMovies.length > 0 ? 'search' : 'discover';
+
+  useEffect(() => {
+    dispatch(moviesActions.filterByRating([ratingStars, typeArray]))
+  }, [ratingStars, dispatch, typeArray])
+  
 
   const changeRatingHandler = (e) => {
-    if (ratingStars === e.target.value) {
-      setRatingStars("");
+    if (ratingStars === parseInt(e.target.value)) {
+      setRatingStars(0);
+      
     } else {
-      setRatingStars(e.target.value);
+      setRatingStars(parseInt(e.target.value));
+      
     }
+   
   };
-
-  console.log(ratingStars);
 
   return (
     <div className={classes.rating}>
@@ -21,8 +38,8 @@ const RatingFilter = () => {
         <input
           type="radio"
           name="stars"
-          value="1"
-          checked={ratingStars === "1"}
+          value={1}
+          checked={ratingStars === 1}
           onClick={(e) => changeRatingHandler(e)}
           readOnly
         />
@@ -32,8 +49,8 @@ const RatingFilter = () => {
         <input
           type="radio"
           name="stars"
-          value="2"
-          checked={ratingStars === "2"}
+          value={2}
+          checked={ratingStars === 2}
           onClick={(e) => changeRatingHandler(e)}
           readOnly
         />
@@ -44,8 +61,8 @@ const RatingFilter = () => {
         <input
           type="radio"
           name="stars"
-          value="3"
-          checked={ratingStars === "3"}
+          value={3}
+          checked={ratingStars === 3}
           onClick={(e) => changeRatingHandler(e)}
           readOnly
         />
@@ -57,8 +74,8 @@ const RatingFilter = () => {
         <input
           type="radio"
           name="stars"
-          value="4"
-          checked={ratingStars === "4"}
+          value={4}
+          checked={ratingStars === 4}
           onClick={(e) => changeRatingHandler(e)}
           readOnly
         />
@@ -71,8 +88,8 @@ const RatingFilter = () => {
         <input
           type="radio"
           name="stars"
-          value="5"
-          checked={ratingStars === "5"}
+          value={5}
+          checked={ratingStars === 5}
           onClick={(e) => changeRatingHandler(e)}
           readOnly
         />

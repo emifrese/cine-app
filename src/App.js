@@ -13,9 +13,7 @@ function App() {
   const dispatch = useDispatch()
   const movies = useSelector(state => state.movies.movies)
 
-  console.log(movies)
   useEffect(() => {
-    console.log(process.env.REACT_APP_TOKEN)
     const getMovies = async () => {
       const config = {
         headers: {
@@ -29,6 +27,7 @@ function App() {
 
         const {results} = data;
 
+        
         dispatch(moviesActions.addMovies(results))
       } catch(error) {
         console.log(error)
