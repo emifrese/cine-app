@@ -1,0 +1,23 @@
+[33mcommit e5a96f99e2b20f4b27fcc8fd71a0a7e212f1cf97[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: unknown <emilianomartindominguezfrese@gmail.com>
+Date:   Wed Jun 22 21:25:15 2022 -0300
+
+    finished logic / remain detail page / remain styles
+
+[33mcommit c4793008979e3c5d63c162e1aefcfec33d2e6527[m
+Author: unknown <emilianomartindominguezfrese@gmail.com>
+Date:   Mon Jun 20 19:16:12 2022 -0300
+
+    added structure to the page / started with the logic / added searchbar / added rating input
+
+[33mcommit 85ab4830377d132d82dfbf1d1bacbc4fdaba7a5c[m
+Author: unknown <emilianomartindominguezfrese@gmail.com>
+Date:   Sun Jun 19 20:39:46 2022 -0300
+
+    first commit
+
+[33mcommit fdeaaf1823d7f85a2a591bc08c67d2adbeb0b3bb[m
+Author: unknown <emilianomartindominguezfrese@gmail.com>
+Date:   Sun Jun 19 20:20:25 2022 -0300
+
+    Initialize project using Create React App

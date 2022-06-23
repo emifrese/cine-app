@@ -1,0 +1,19 @@
+.moviesGridContainer {
+    display: grid;
+    grid-template-columns: repeat(6, fit-content(100%));
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    max-height:  300px;
+    max-width: 100%;
+}
+
+.moviesGridContainer div {
+}
+
+.moviesGridContainer img {
+    border: 2px solid red;
+    object-fit: contain;
+    max-with: 100%;
+    max-height: 100%
+}

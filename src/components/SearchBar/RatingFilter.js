@@ -11,8 +11,6 @@ const RatingFilter = () => {
   const searchMovies = useSelector((state) => state.movies.searchMovies);
   const ratedMovies = useSelector(state => state.movies.ratedMovies)
 
-  console.log(movies)
-  console.log(ratedMovies)
 
   const typeArray = searchMovies.length > 0 ? 'search' : 'discover';
 

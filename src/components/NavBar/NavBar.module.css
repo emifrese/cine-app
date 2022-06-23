@@ -1,7 +1,9 @@
 .nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     text-align: center;
+    width: 100%;
 }
 
 .nav ul:nth-child(2) {
@@ -11,13 +13,29 @@
 .nav_ul {
     display: flex;
     list-style: none;
-    width: 50%;
-    padding: 0;
+    align-items: center;
+    width: 40%;
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 
 .nav_ul li {
-    padding: 30px;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navUlSignUp {
+    border: 2px solid red;
+    border-radius: 25px;
+}
+
+.navUlTitle {
+    font-style: oblique;
+    font-weight: bold;
 }

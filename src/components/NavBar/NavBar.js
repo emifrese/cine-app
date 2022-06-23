@@ -6,12 +6,12 @@ const NavBar = () => {
   return (
     <nav className={classes.nav}>
       <ul className={classes.nav_ul}>
-        <li>fliixus</li>
+        <li className={classes.navUlTitle}>fliixus</li>
         <li>Browse+</li>
       </ul>
       <ul className={classes.nav_ul}>
         <li>Login</li>
-        <li>Sign Up</li>
+        <li className={classes.navUlSignUp}>Sign Up</li>
       </ul>
     </nav>
   );

@@ -12,7 +12,6 @@ const SearchBar = () => {
     const searchedMovies = useSelector(state => state.movies.searchMovies)
     const dispatch = useDispatch()
 
-    console.log(searchedMovies)
 
     useEffect(() => {
       if(enteredMovie.trim() === ''){
