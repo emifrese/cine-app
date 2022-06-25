@@ -1,6 +1,6 @@
-.headerContainer {
+.footerContainer {
     width: 100%;
-    height: 250px;
+    height: 150px;
     display: flex;
     position: relative;
     flex-wrap: wrap;
@@ -9,3 +9,8 @@
     color: white
 }
 
+.backgroundImage {
+    object-fit: cover;
+    position: absolute;
+    z-index: -1
+}

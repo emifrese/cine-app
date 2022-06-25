@@ -1,19 +1,125 @@
-.moviesGridContainer {
+.moviesFlexContainer {
+    display: flex;
+    width: 60%;
+    height: 430px;
+    background-color: #ccc;
+    padding: 20px; 
+    border-radius: 40px;
+    align-items: center;
+}
+
+.mainMovieContainer {
+    width: 30%;
+    display: flex;
+    margin: 10px;
+    position: relative;
+    height:100%;
+}
+
+.mainMovieContainer img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+.asideMovieContainer {
+    width: 70%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(6, fit-content(100%));
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 5px;
-    max-height:  300px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;  
+    align-items: center;
+}
+
+.movieContainer {
+    position: relative;
+}
+
+.movieContainer img {
+    object-fit: cover;
     max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    display: block;
 }
 
-.moviesGridContainer div {
+.movieCardDescription {
+    width: 70%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.moviesGridContainer img {
-    border: 2px solid red;
-    object-fit: contain;
-    max-with: 100%;
-    max-height: 100%
+.movieDescription {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #aaa;
 }
+
+.movieDescription h3 {
+    width: 80%;
+}
+
+.movieDescription figure {
+    display: flex;    
+    margin: 0;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.movieDescription img {
+    width: 20px;
+    margin-left: 5px;
+}
+
+.movieDescription p {
+    
+}
+
+.closeDescriptionButton {
+    background-color: transparent;
+    display: flex;
+    outline: none;
+    border: none;
+    width: 20%;
+    justify-content: center
+}
+
+.closeDescriptionButton img {
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 20px;
+    transition: .5s ease;
+    background-color: #ccc;
+}
+
+.mainMovieContainer:hover .overlay,
+.movieContainer:hover .overlay {
+    opacity: 0.7;
+}
+

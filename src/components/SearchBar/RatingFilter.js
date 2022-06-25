@@ -9,25 +9,22 @@ const RatingFilter = () => {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
   const searchMovies = useSelector((state) => state.movies.searchMovies);
-  const ratedMovies = useSelector(state => state.movies.ratedMovies)
+  const ratedMovies = useSelector((state) => state.movies.ratedMovies);
 
+  console.log(ratedMovies);
 
-  const typeArray = searchMovies.length > 0 ? 'search' : 'discover';
+  const typeArray = searchMovies.length > 0 ? "search" : "discover";
 
   useEffect(() => {
-    dispatch(moviesActions.filterByRating([ratingStars, typeArray]))
-  }, [ratingStars, dispatch, typeArray])
-  
+    dispatch(moviesActions.filterByRating([ratingStars, typeArray]));
+  }, [ratingStars, dispatch, typeArray, searchMovies, movies]);
 
   const changeRatingHandler = (e) => {
     if (ratingStars === parseInt(e.target.value)) {
       setRatingStars(0);
-      
     } else {
       setRatingStars(parseInt(e.target.value));
-      
     }
-   
   };
 
   return (
