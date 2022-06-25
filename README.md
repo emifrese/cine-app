@@ -1,4 +1,4 @@
-# Cinema Project App
+# Cinema Project App (only desktop)
 This is a mockup App build for a cinema. 
 
 Es una app de prueba para un cine.
