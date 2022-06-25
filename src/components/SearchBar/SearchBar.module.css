@@ -1,4 +1,4 @@
-.search_bar_container {
+.searchBarContainer {
     display: flex;
     justify-content: center;
     padding: 35px;
@@ -6,7 +6,7 @@
     margin-bottom: 10px
 }
 
-.search_bar_label {
+.searchBarLabel {
     display: flex;
     border-radius: 20px;
     padding: 5px;
@@ -14,14 +14,14 @@
     background-color: white;
 }
 
-.search_bar_img {
+.searchBarImg {
     width: 15px;
     padding: 2px;
     padding-left: 10px;
     padding-right: 5px;
 }
 
-.search_bar_input {
+.searchBarInput {
     border: none;
     outline: none;
     width: 100%;

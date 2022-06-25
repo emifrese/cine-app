@@ -9,9 +9,8 @@ const RatingFilter = () => {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
   const searchMovies = useSelector((state) => state.movies.searchMovies);
-  const ratedMovies = useSelector((state) => state.movies.ratedMovies);
 
-  console.log(ratedMovies);
+  console.log('render rating filter')
 
   const typeArray = searchMovies.length > 0 ? "search" : "discover";
 
@@ -28,72 +27,74 @@ const RatingFilter = () => {
   };
 
   return (
-    <div className={classes.rating}>
-      <label>
-        <input
-          type="radio"
-          name="stars"
-          value={1}
-          checked={ratingStars === 1}
-          onClick={(e) => changeRatingHandler(e)}
-          readOnly
-        />
-        <span className={classes.icon}>★</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="stars"
-          value={2}
-          checked={ratingStars === 2}
-          onClick={(e) => changeRatingHandler(e)}
-          readOnly
-        />
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="stars"
-          value={3}
-          checked={ratingStars === 3}
-          onClick={(e) => changeRatingHandler(e)}
-          readOnly
-        />
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="stars"
-          value={4}
-          checked={ratingStars === 4}
-          onClick={(e) => changeRatingHandler(e)}
-          readOnly
-        />
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-      </label>
-      <label>
-        <input
-          type="radio"
-          name="stars"
-          value={5}
-          checked={ratingStars === 5}
-          onClick={(e) => changeRatingHandler(e)}
-          readOnly
-        />
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-        <span className={classes.icon}>★</span>
-      </label>
+    <div className={classes.ratingContainer}>
+      <div className={classes.rating}>
+        <label>
+          <input
+            type="radio"
+            name="stars"
+            value={1}
+            checked={ratingStars === 1}
+            onClick={(e) => changeRatingHandler(e)}
+            readOnly
+          />
+          <span className={classes.icon}>★</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="stars"
+            value={2}
+            checked={ratingStars === 2}
+            onClick={(e) => changeRatingHandler(e)}
+            readOnly
+          />
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="stars"
+            value={3}
+            checked={ratingStars === 3}
+            onClick={(e) => changeRatingHandler(e)}
+            readOnly
+          />
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="stars"
+            value={4}
+            checked={ratingStars === 4}
+            onClick={(e) => changeRatingHandler(e)}
+            readOnly
+          />
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="stars"
+            value={5}
+            checked={ratingStars === 5}
+            onClick={(e) => changeRatingHandler(e)}
+            readOnly
+          />
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+          <span className={classes.icon}>★</span>
+        </label>
+      </div>
     </div>
   );
 };

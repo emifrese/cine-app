@@ -1,16 +1,16 @@
-import React from 'react'
-import MoviesGrid from '../Movies/MoviesGrid'
-import RatingFilter from '../SearchBar/RatingFilter'
-
-import classes from './Main.module.css'
+import React from "react";
+import MoviesGrid from "../Movies/MoviesGrid";
+import MainWrapper from "../PagesWrappers/MainWrapper";
+import RatingFilter from "../SearchBar/RatingFilter";
 
 const Main = () => {
+  console.log("render main");
   return (
-    <div className={classes.mainContainer}>
+    <MainWrapper>
       <RatingFilter />
       <MoviesGrid />
-    </div>
-  )
-}
+    </MainWrapper>
+  );
+};
 
-export default Main
+export default Main;

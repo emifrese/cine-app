@@ -1,3 +1,9 @@
+.ratingContainer {
+  display: flex;
+  width: 100%;
+  padding-left: 40%
+}
+
 .rating {
     display: inline-block;
     position: relative;
@@ -5,14 +11,13 @@
     height: 50px;
     line-height: 50px;
     font-size: 50px;
-    padding-left: 20px;
     margin:20px;
   }
   
   .rating label {
     position: absolute;
     top: 0;
-    left: 20px;
+    left: 0;
     height: 100%;
     cursor: pointer;
   }

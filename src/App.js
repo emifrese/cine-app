@@ -1,17 +1,15 @@
 import { useEffect } from 'react';
 import clienteAxios from './config/axios';
-import logo from './logo.svg';
 import Layout from './components/UI/Layout'
 import Header from './components/UI/Header'
 import Main from './components/UI/Main'
 import Footer from './components/UI/Footer'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { moviesActions } from './store/movies';
 
 function App() {
 
   const dispatch = useDispatch()
-  const movies = useSelector(state => state.movies.movies)
 
   useEffect(() => {
     const getMovies = async () => {
@@ -33,8 +31,6 @@ function App() {
         console.log(error)
       }
     }
-
-    const getSpecMovie = () => {}
 
     getMovies()
   }, [dispatch])

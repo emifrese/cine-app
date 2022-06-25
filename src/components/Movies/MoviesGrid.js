@@ -11,6 +11,8 @@ const MoviesGrid = () => {
 
   const [showDescription, setShowDescription] = useState([false, ""]);
 
+  console.log('render movies')
+
   let mainMovie = [];
   let content = [];
 
@@ -18,7 +20,7 @@ const MoviesGrid = () => {
     movies.forEach((mov, i) => {
       if (i === 0) {
         mainMovie.push(
-          <div className={classes.mainMovieContainer}>
+          <div className={classes.mainMovieContainer} key={i}>
             <img
               src={`https://image.tmdb.org/t/p/w500` + mov.poster_path}
               alt="main-movie"
@@ -35,7 +37,7 @@ const MoviesGrid = () => {
         );
       } else if (i !== 0 && i < 9) {
         content.push(
-          <div className={classes.movieContainer}>
+          <div className={classes.movieContainer} key={i}>
             <img
               src={`https://image.tmdb.org/t/p/w500` + mov.poster_path}
               alt="movie-poster"
@@ -65,7 +67,6 @@ const MoviesGrid = () => {
     );
     content.push(
       <div className={classes.movieDescription}>
-        <h3>{showDescription[1].title}</h3>
         <button
           className={classes.closeDescriptionButton}
           onClick={() => {
@@ -74,6 +75,7 @@ const MoviesGrid = () => {
         >
           <img src={cross} alt="close-description" />
         </button>
+        <h3>{showDescription[1].title}</h3>
         <figure>
           <figcaption>{showDescription[1].vote_average}</figcaption>
           <img src={star} alt="estrella" />
